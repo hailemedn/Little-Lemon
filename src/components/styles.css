@@ -1,0 +1,8 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.item {
+    grid-column: span 2;
+}
