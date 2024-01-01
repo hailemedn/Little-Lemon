@@ -1,4 +1,4 @@
-import "./styles.css"
+
 import adrianImg from "../images/Mario and Adrian A.jpg";
 const Footer = () => {
     return (
