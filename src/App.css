@@ -1,36 +1,24 @@
-.body-container > nav > ul {
-  display: flex;
-  gap: 2em;
-}
-
-.body-container > nav > ul > li {
-  list-style: none;
-
-}
-
-.body-container {
+.app {
+  margin: 0 70px;
   display: grid;
-  height: 150vh;
-  grid-template-areas: "head nav"
-                        "main main"
-                        "footer footer";
-  grid-template-rows: 10vh 90vh 400px;
-  padding:0 70px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 122px auto auto;
+  column-gap: 20px;
 }
 
-.body-container > header {
-  grid-area: head;
+header {
+  grid-column: 3/ span 2;
 }
 
-.body-container > nav {
-  grid-area: nav;
+.header-nav {
+  grid-column: 5/ span 6;
 }
 
-.body-container > main {
-  grid-area: main;
-  background-color: aqua;
+main {
+  grid-column: 3/ span 8;
 }
 
-.body-container > footer {
-  grid-area: footer;
+footer {
+  grid-column: 3/ span 8;
 }
+
