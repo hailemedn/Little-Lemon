@@ -1,10 +1,12 @@
 .app {
-  margin: 0 70px;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 122px auto auto;
   column-gap: 20px;
+  transition: 0.2s;
 }
+
 
 header {
   grid-column: 3/ span 2;

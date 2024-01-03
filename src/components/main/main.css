@@ -4,17 +4,19 @@
     height: 406px;
 }
 
-.hero-section .hero-text {
+.hero-text, .hero-img {
     flex: 1;
 }
 
 
 .hero-section img{
-    flex: 1;
-    width: 90%;
+    width: 80%;
+    height: 110%;
     max-width: 509px;
+    object-fit: cover;
+    border-radius: 10px;
 
-    
+
 }
 
 .about img{
