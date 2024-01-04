@@ -3,6 +3,8 @@ import abtImage1 from "../assets/restaurant chef B.jpg";
 import abtImage2 from "../assets/Mario and Adrian b.jpg";
 import greekSaladImg from "../assets/greek salad.jpg";
 import heroImage from "../assets/restauranfood.jpg";
+import Card from "./Card";
+
 const Main = () => {
   return (
     <main>
@@ -29,15 +31,7 @@ const Main = () => {
           <button className="btn primary">Online Menu</button>
           <h1>Specials</h1>
           <section className="specials-cards">
-            <div className="card">
-              {/* <img src={greekSaladImg} alt="Greek Salad" /> */}
-              <h4>Greek Salad</h4>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-                nesciunt veritatis tenetur nemo nam doloribus iusto error
-                nostrum, sequi vel!
-              </p>
-            </div>
+            <Card />
           </section>
         </div>
       </section>
