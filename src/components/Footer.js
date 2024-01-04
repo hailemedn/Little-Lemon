@@ -1,5 +1,5 @@
-import './footer.css'
-import adrianImg from "../../assets/Mario and Adrian A.jpg";
+import './styles.css'
+import adrianImg from "../assets/Mario and Adrian A.jpg";
 const Footer = () => {
     return (
         <footer>
