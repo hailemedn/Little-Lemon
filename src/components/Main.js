@@ -12,12 +12,11 @@ const Main = () => {
       <section id="hero-section">
         <div className="wrapper">
           <div id="hero-text">
-            <h1 className="main-title">Little Lemon</h1>
-            <h3>Chicago</h3>
+            <h1 id="main-title">Little Lemon</h1>
+            <h3 id="sub-title">Chicago</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-              dolores vel aliquam sapiente consectetur inventore cupiditate quam
-              magni soluta Lorem ipsum dolor sit amet.
+              We are a family owned Mediterranean restaurant, focused on
+              traditional recipes served with a modern twist.
             </p>
             <button className="btn primary">Reserve a table</button>
           </div>

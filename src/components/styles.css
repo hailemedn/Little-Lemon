@@ -1,3 +1,9 @@
+:root {
+    --clr-primary: #F4CE14;
+    --clr-secondary: #495E57;
+}
+
+
 .wrapper {
     max-width: 920px;
     padding-left: 0.6rem;
@@ -79,9 +85,15 @@ main {
     overflow: hidden;
 }
 
-main h1.main-title {
-    color:#F4CE14;
+main h1#main-title {
+    color: var(--clr-primary);
     font-size: 4rem;
+    font-weight: 400;
+    font-family: 'Markazi Text', serif;
+}
+
+main h3#sub-title {
+    font-size: 2.5rem;
     font-weight: 200;
     font-family: 'Markazi Text', serif;
 }
@@ -91,7 +103,7 @@ main section {
 }
 
 main section#hero-section {
-    background-color: #495E57;
+    background-color: var(--clr-secondary);
     color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -152,16 +164,27 @@ main section#specials-section button{
     border-style: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .primary {
-    background-color: #F4CE14;
+    background-color: var(--clr-primary);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
 }
 
 
 
 
-footer {
+footer .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
@@ -177,15 +200,12 @@ footer li {
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 footer .footer-img > img {
     object-fit: cover;
-    object-position: right;
-    height: 300px;
-    width: 200px;
-
+    width: 100%;
 }
 
 footer .footer-img {
@@ -193,26 +213,29 @@ footer .footer-img {
 }
 
 footer .footer-nav {
-    grid-column: 7/ span 2;
+    grid-column: 5/ span 2;
 }
 
 footer .contact {
-    grid-column: 9/ span 2;
+    grid-column: 7/ span 2;
 }
 
 footer .socials {
-    grid-column: 11/ span 2;
+    grid-column: 9/ span 2;
 }
+
+
 
 .cards-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
 .cards-container > * {
     flex: 1;
+    margin: 0 auto;
 }
 
 
@@ -255,6 +278,27 @@ footer .socials {
         max-width: 422px;
     }
 
+    footer .grid-container > * {
+        margin-bottom: 2rem;
+    }
 
+    footer .grid-container {
+        grid-template-columns: repeat(8, 1fr);
+    }
 
+    footer .footer-img {
+        grid-column: 1/ span 3;
+    }
+    
+    footer .footer-nav {
+        grid-column: 5/ span 2;
+    }
+    
+    footer .contact {
+        grid-column: 5/ span 2;
+    }
+    
+    footer .socials {
+        grid-column: 5/ span 2;
+    }
 }
