@@ -3,6 +3,12 @@
     --clr-secondary: #495E57;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
+
+
 
 .wrapper {
     max-width: 920px;
@@ -38,11 +44,23 @@ header nav.header-nav ul {
 
 header nav.header-nav li {
     list-style: none;
+    
+}
+
+header nav.header-nav li:hover {
+    color: var(--clr-primary);
 }
 
 header nav.header-nav a {
     text-decoration: none;
-    color: black;
+    color: var(--clr-secondary);
+    padding: 0.5rem;
+    border-radius: 12px;
+    transition: 0.1s ;
+}
+
+header nav.header-nav a:hover {
+    color: var(--clr-primary);
 }
 
 
@@ -87,7 +105,7 @@ main {
 
 main h1#main-title {
     color: var(--clr-primary);
-    font-size: 4rem;
+    font-size: 5.3rem;
     font-weight: 400;
     font-family: 'Markazi Text', serif;
 }
@@ -153,6 +171,12 @@ main section#specials-section button{
 #specials-section a {
     text-decoration: none;
     color: black;
+}
+
+#specials-section .section-title {
+    font-family: 'Karla', sans-serif;
+    font-size: 20pt;
+    font-weight: bolder;
 }
 
 
