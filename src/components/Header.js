@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Routes, Route, Link } from 'react-router-dom';
+import HomePage from './Homepage';
+import BookingPage from './BookingPage';
+
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
@@ -40,7 +43,7 @@ const Header = () => {
       </nav>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/booking' element={<BookingPage />} />
+        <Route path='/reservation' element={<BookingPage />} />
       </Routes>
     </header>
   );
