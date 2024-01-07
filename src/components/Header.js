@@ -3,6 +3,7 @@ import logo from "../assets/Logo .svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Routes, Route, Link } from 'react-router-dom';
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
@@ -15,28 +16,32 @@ const Header = () => {
       <nav className="header-nav">
         <ul id="navbar">
           <li>
-            <a href="/home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/menu">Menu</a>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <a href="/reservation">Reservation</a>
+            <Link to="/reservation">Reservation</Link>
           </li>
           <li>
-            <a href="/order-online">Order online</a>
+            <Link to="/order-online">Order online</Link>
           </li>
           <li>
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
         <div id="mobile" onClick={handleClick}>
           <FontAwesomeIcon icon={clicked ? faX : faBars} />
         </div>
       </nav>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/booking' element={<BookingPage />} />
+      </Routes>
     </header>
   );
 };
