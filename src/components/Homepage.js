@@ -1,7 +1,20 @@
+import CallToAction from "./CallToAction";
+import Chicago from "./Chicago";
+import Footer from "./Footer";
+import Header from "./Header";
+import Specials from "./Specials";
+import CustomersSay from "./CustomersSay";
 
 const HomePage = () => {
     return (
-        <h1>Homepage</h1>
+        <>
+            <Header />
+            <CallToAction />
+            <Specials />
+            {/* <CustomersSay /> */}
+            {/* <Chicago /> */}
+            <Footer />
+        </>
     )
 }
 

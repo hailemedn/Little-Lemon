@@ -110,54 +110,54 @@ main {
   overflow: hidden;
 }
 
-main h1#main-title {
+h1#main-title {
   color: var(--clr-primary);
   font-size: 5.3rem;
   font-weight: 400;
   font-family: "Markazi Text", serif;
 }
 
-main h3#sub-title {
+h3#sub-title {
   font-size: 2.5rem;
   font-weight: 200;
   font-family: "Markazi Text", serif;
 }
 
-main section {
+section {
   margin-bottom: 2rem;
 }
 
-main section#hero-section {
+section#hero-section {
   background-color: var(--clr-secondary);
   color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-main section#hero-section > div {
+section#hero-section > div {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
   margin: 0 auto;
 }
 
-main section#hero-section p {
+section#hero-section p {
   max-width: 30rem;
   margin: 0.5rem 0;
 }
 
-main section#hero-section button {
+section#hero-section button {
   margin-top: 2rem;
 }
 
-main section#hero-section #hero-text {
+section#hero-section #hero-text {
   max-width: 422px;
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
 }
 
-main section#hero-section img {
+section#hero-section img {
   height: 120%;
   width: 100%;
   max-width: 275px;
@@ -165,7 +165,7 @@ main section#hero-section img {
   border-radius: 10px;
 }
 
-main section#specials-section button {
+section#specials-section button {
   float: right;
 }
 
@@ -294,12 +294,12 @@ footer .socials {
 }
 
 @media screen and (max-width: 600px) {
-  main section#hero-section > div {
+  section#hero-section > div {
     flex-direction: column;
     align-items: center;
   }
 
-  main section#hero-section img {
+  section#hero-section img {
     max-width: 422px;
   }
 

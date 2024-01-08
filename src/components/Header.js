@@ -19,7 +19,7 @@ const Header = () => {
       <nav className="header-nav">
         <ul id="navbar">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -42,7 +42,7 @@ const Header = () => {
         </div>
       </nav>
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
         <Route path='/reservation' element={<BookingPage />} />
       </Routes>
     </header>
