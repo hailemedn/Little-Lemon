@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hailemedn.github.io/little-lemon-restaurant-website",
-  "name": "little-lemon-restaurant-website",
+  "homepage": "https://hailemedn.github.io/little-lemon",
+  "name": "little-lemon-restaurant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
