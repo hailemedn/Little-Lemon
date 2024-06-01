@@ -8,7 +8,6 @@ import CustomersSay from "./CustomersSay";
 const HomePage = () => {
     return (
         <>
-            <Header />
             <CallToAction />
             <Specials />
             {/* <CustomersSay /> */}

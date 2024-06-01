@@ -19,7 +19,7 @@ const Header = () => {
       <nav className="header-nav">
         <ul id="navbar">
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -41,10 +41,6 @@ const Header = () => {
           <FontAwesomeIcon icon={clicked ? faX : faBars} />
         </div>
       </nav>
-      <Routes>
-        <Route path='/home' element={<HomePage />} />
-        <Route path='/reservation' element={<BookingPage />} />
-      </Routes>
     </header>
   );
 };
