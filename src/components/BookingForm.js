@@ -4,7 +4,7 @@ import bookingImg from '../assets/restauranfood.jpg'
 function BookingForm() {
 
     const [date, setDate] = useState("");
-    const [availableTimes, setTime] = useState(["17:00","18:00","19:00"]);
+    const [availableTimes, setTime] = useState(['17:00','18:00','19:00', '20:00', '21:00']);
     const [guests, setGuests] = useState("");
     const [occassion, setOccassion] = useState('');
 
@@ -27,10 +27,11 @@ function BookingForm() {
                     <div className='fields'>
                         <label htmlFor="">Choose Time</label>
                         <select name="" id="" value={availableTimes} onChange={e => setTime(e.target.value)}>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
-                            <option value="20:00">20:00</option>
+                            {
+                                availableTimes.map((time) => (
+                                    <option key={time}>{time}</option>
+                                ))
+                            }
                         </select>
                     </div>
                     
