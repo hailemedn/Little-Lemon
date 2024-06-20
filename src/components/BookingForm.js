@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import bookingImg from '../assets/restauranfood.jpg'
+import { type } from '@testing-library/user-event/dist/type';
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatch }) {
 
     const [date, setDate] = useState("");
-    const [availableTimes, setTime] = useState(['17:00','18:00','19:00', '20:00', '21:00']);
+    
     const [guests, setGuests] = useState("");
     const [occassion, setOccassion] = useState('');
 
   return (
     <section id='bookingForm-section'>
         <div className="wrapper booking-part">
-            
+            {/* <h1>{availableTimes.time}</h1> */}
             <div id='img-part'>
                 <h1 >Little Lemon</h1>
                 <h3 className="sub-title">Chicago</h3>
@@ -22,16 +23,14 @@ function BookingForm() {
                 <form action="">    
                     <div className='fields'>
                         <label htmlFor="">Choose Date</label>
-                        <input type="date" value={date} onChange={e => setDate(e.target.value)}/>
+                        <input type="date" onChange={() => dispatch({type: 'weekday'})}/>
                     </div>
                     <div className='fields'>
                         <label htmlFor="">Choose Time</label>
-                        <select name="" id="" value={availableTimes} onChange={e => setTime(e.target.value)}>
-                            {
-                                availableTimes.map((time) => (
-                                    <option key={time}>{time}</option>
-                                ))
-                            }
+                        <select name="" id="">
+                            {availableTimes.time.map(times => (
+                                <option key={times} value={times}>{times}</option>
+                            ))}
                         </select>
                     </div>
                     
@@ -50,7 +49,7 @@ function BookingForm() {
                     
                     
                     <input type="submit" value='Make your reservation' className='btn primary'/>
-                </form> 
+                </form>
             </div>
         </div>
         
