@@ -4,7 +4,7 @@ import { type } from '@testing-library/user-event/dist/type';
 
 function BookingForm({ availableTimes, dispatch }) {
 
-    const [date, setDate] = useState("");
+    // const [date, setDate] = useState("");
     
     const [guests, setGuests] = useState("");
     const [occassion, setOccassion] = useState('');
@@ -23,7 +23,7 @@ function BookingForm({ availableTimes, dispatch }) {
                 <form action="">    
                     <div className='fields'>
                         <label htmlFor="">Choose Date</label>
-                        <input type="date" onChange={() => dispatch({type: 'weekday'})}/>
+                        <input type="date" onChange={(e) => dispatch({type: 'weekday', payload: e.target.value})}/>
                     </div>
                     <div className='fields'>
                         <label htmlFor="">Choose Time</label>
