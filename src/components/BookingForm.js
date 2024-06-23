@@ -22,12 +22,12 @@ function BookingForm({ availableTimes, dispatch }) {
                 <h3 className="sub-title">Find a table for any occassion</h3>
                 <form action="">    
                     <div className='fields'>
-                        <label htmlFor="">Choose Date</label>
-                        <input type="date" onChange={(e) => dispatch({type: 'weekday', payload: e.target.value})}/>
+                        <label htmlFor="chooseDate">Choose Date</label>
+                        <input id='chooseDate' type="date" onChange={(e) => dispatch({type: 'weekday', payload: e.target.value})}/>
                     </div>
                     <div className='fields'>
-                        <label htmlFor="">Choose Time</label>
-                        <select name="" id="">
+                        <label htmlFor="chooseTime">Choose Time</label>
+                        <select name="chooseTime" id="chooseTime">
                             {availableTimes.time.map(times => (
                                 <option key={times} value={times}>{times}</option>
                             ))}

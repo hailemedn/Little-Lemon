@@ -17,9 +17,20 @@ test('Render the restaurant name', () => {
    expect(restaurantName).toBeInTheDocument;
 });
 
-test('validating return value for initializeTimes', () => {
-   render(<BookingPage />);
+// test('validating return value for initializeTimes', () => {
+//    render(<BookingPage />);
    
-})
+// });
+
+test('check the available times change when we select a different date', () => {
+   render(<BookingPage/>);
+   const dateInput = screen.getByLabelText('Choose Date');
+   const availableTimes = screen.getByLabelText('Choose Time');
+   const initalOptions = availableTimes.querySelectorAll('option');
+   fireEvent.change(dateInput, {target: {value: '2024-06-24'}});
+   expect(dateInput).toHaveValue('2024-06-24');
+   const updatedOptions = availableTimes.querySelectorAll('option');
+   expect(updatedOptions).not.toEqual(expect.objectContaining(initalOptions));
+});
 
 
