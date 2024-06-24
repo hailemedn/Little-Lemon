@@ -248,6 +248,17 @@ section#bookingForm-section {
     background-position: calc(100% - 16px);
 }
 
+#confirmation-section > div {
+  padding: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+
+
 .btn {
   width: 100%;
   max-width: 200px;
