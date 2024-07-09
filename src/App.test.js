@@ -20,9 +20,14 @@ import userEvent from '@testing-library/user-event';
 // });
 
 // test('validating return value for initializeTimes', () => {
-//    render(<BookingPage />);
+//    render(<BookingPage />);  
+// });
+
+// test('validating return value for updateTimes function', () => {
    
 // });
+
+
 
 test('check the available times change when we select a different date', () => {
    render(<BrowserRouter><BookingPage/></BrowserRouter>);

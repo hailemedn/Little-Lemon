@@ -236,6 +236,16 @@ section#bookingForm-section {
   border-radius: 10px;
 }
 
+input:disabled {
+  background-color: #dfdcdc;
+  color: white;
+  cursor: not-allowed;
+}
+
+input:focus:invalid {
+  border: 2px solid red;
+}
+
 #bookingForm-section form select {
   padding: 1em;
   border-radius: 10px;

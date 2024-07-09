@@ -3,6 +3,24 @@ import bookingImg from '../assets/restauranfood.jpg'
 import { type } from '@testing-library/user-event/dist/type';
 
 function BookingForm({ availableTimes, dispatch, formData, handleChange, submitForm}) {
+
+const getIsFormValid = () => {
+    return (
+        availableTimes.date &&
+        formData.guests
+    )
+}
+
+// const handleDateChange = (e) => {
+//     const newDate = e.target.value;
+//     dispatch({type: 'set-date', payload: newDate});
+//     ;
+    
+// }
+
+console.log(getIsFormValid())
+ const today = new Date().toISOString().split('T')[0];
+
   return (
     <section id='bookingForm-section'>
         <div className="wrapper booking-part">
@@ -19,9 +37,11 @@ function BookingForm({ availableTimes, dispatch, formData, handleChange, submitF
                     <h2>{formData.guests}</h2>
                     <h2>{formData.occassion}</h2>
                     <h2>{formData.chooseTime}</h2> */}
+
+                    
                     <div className='fields'>
                         <label htmlFor="chooseDate">Choose Date</label>
-                        <input name='selectedDate' id='chooseDate' type="date" value={availableTimes.inputValue} onChange={e => dispatch({type: 'weekday', payload: e.target.value})} />
+                        <input name='selectedDate' id='chooseDate' type="date" value={availableTimes.date} onChange={e => dispatch({type: 'set-time', payload: e.target.value})} min={today}  required/>
                     </div>
                     <div className='fields'>
                         <label htmlFor="chooseTime">Choose Time</label>
@@ -34,7 +54,7 @@ function BookingForm({ availableTimes, dispatch, formData, handleChange, submitF
                     
                     <div className='fields'>
                         <label htmlFor="guests">Number of guests</label>
-                        <input name='guests' id='guests' type="number" placeholder='No of Guests' value={formData.guests} onChange={handleChange}/>
+                        <input name='guests' id='guests' type="number" placeholder='No of Guests' value={formData.guests} onChange={handleChange} min={1} required/>
                     </div>
 
                     <div className='fields'>
@@ -45,8 +65,8 @@ function BookingForm({ availableTimes, dispatch, formData, handleChange, submitF
                         </select>
                     </div>
                     
-                    
-                    <input type="submit" value='Make your reservation' className='btn primary'/>
+        
+                    <input type="submit" value='Make your reservation' className='btn primary' disabled={!getIsFormValid()}/>
                 </form>
             </div>
         </div>
