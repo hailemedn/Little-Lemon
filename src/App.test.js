@@ -27,7 +27,7 @@ import userEvent from '@testing-library/user-event';
    
 // });
 
-
+const today = new Date().toISOString().split('T')[0];
 
 test('check the available times change when we select a different date', () => {
    render(<BrowserRouter><BookingPage/></BrowserRouter>);
@@ -55,6 +55,37 @@ test('navigation to confirmation page when the form is submitted', () => {
 
    userEvent.click(submitButton);
    //expect to navigate to /confirmBooking??
+});
+
+test('validate the correct attributes are applied', () => {
+   
+   render(<BrowserRouter><BookingPage /></BrowserRouter>);
+   const dateInput = screen.getByLabelText('Choose Date');
+   const guestsInput = screen.getByLabelText('Number of guests');
+   expect(dateInput).toHaveAttribute('min', today);
+   expect(guestsInput).toHaveAttribute('min', "1");
+   expect(dateInput && guestsInput).toBeRequired();
+});
+
+test('verify valid and invalid test for input field validation functions', () => {
+   render(<BrowserRouter><BookingPage /></BrowserRouter>);
+   const date = screen.getByLabelText('Choose Date');
+   const time = screen.getByLabelText('Choose Time');
+   const guests = screen.getByLabelText('Number of guests');
+   const occassion = screen.getByLabelText('Occassion');
+   const submitButton = screen.getByText('Make your reservation');
+
+   
+   fireEvent.change(time, {target: {value: '17:00'}});
+   fireEvent.change(guests, {target: {value: '3'}});
+   fireEvent.change(occassion, {target: {value: 'birthday'}});
+   
+   expect(submitButton).toHaveAttribute('disabled');
+
+   // fireEvent.change(date, {target: {value: today}});
+
+   
+   
 })
 
 
